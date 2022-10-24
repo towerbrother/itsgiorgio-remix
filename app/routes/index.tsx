@@ -6,10 +6,8 @@ import sanityClient from '~/sanity';
 export const loader: LoaderFunction = async () => {
   const banners = await sanityClient.fetch(`*[_type == "banner"]`);
   const contactForms = await sanityClient.fetch(`*[_type == "contactForm"]`);
-  const footers = await sanityClient.fetch(`*[_type == "footer"]`);
   const headers = await sanityClient.fetch(`*[_type == "header"]`);
   const keywords = await sanityClient.fetch(`*[_type == "keywords"]`);
-  const legalFooters = await sanityClient.fetch(`*[_type == "legalFooter"]`);
   const stages = await sanityClient.fetch(`*[_type == "stage"]`);
   const htmlTexts = await sanityClient.fetch(`*[_type == "htmlText"]`);
   const timelines = await sanityClient.fetch(`*[_type == "timeline"]`);
@@ -17,10 +15,8 @@ export const loader: LoaderFunction = async () => {
   return json({
     banners,
     contactForms,
-    footers,
     headers,
     keywords,
-    legalFooters,
     stages,
     htmlTexts,
     timelines,
@@ -29,8 +25,6 @@ export const loader: LoaderFunction = async () => {
 
 export default function Index() {
   const data = useLoaderData();
-
-  console.log({ data });
 
   return (
     <main>
@@ -47,20 +41,8 @@ export default function Index() {
         ))}
       </div>
       <div>
-        <h1>Footer</h1>
-        {data.footers.map((item) => (
-          <span key={item.title}>{item.title}</span>
-        ))}
-      </div>
-      <div>
         <h1>Header</h1>
         {data.headers.map((item) => (
-          <span key={item.title}>{item.title}</span>
-        ))}
-      </div>
-      <div>
-        <h1>Legal Footer</h1>
-        {data.legalFooters.map((item) => (
           <span key={item.title}>{item.title}</span>
         ))}
       </div>

@@ -1,9 +1,9 @@
 import { StyledFooter, StyledCopyright } from './styles';
 
-export default function Footer() {
+export default function Footer({ copyright }: { copyright: string }) {
   return (
     <StyledFooter>
-      <StyledCopyright>&copy; 2022 by Giorgio Torre</StyledCopyright>
+      <StyledCopyright>&copy; {copyright}</StyledCopyright>
     </StyledFooter>
   );
 }
