@@ -1,8 +1,8 @@
 import sanityClient from '@sanity/client';
 
 export default sanityClient({
-  projectId: 'ndac043j',
+  projectId: '79pa3wid',
   dataset: 'production',
-  apiVersion: '2022-09-29',
+  apiVersion: '2022-10-24',
   useCdn: false,
 });
