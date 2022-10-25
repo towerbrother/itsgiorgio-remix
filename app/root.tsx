@@ -1,4 +1,5 @@
-import { json, LoaderFunction, MetaFunction } from '@remix-run/node';
+import type { LoaderFunction, MetaFunction } from '@remix-run/node';
+import { json } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -9,8 +10,11 @@ import {
   useLoaderData,
 } from '@remix-run/react';
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import sanityClient from '~/sanity';
+import type { FooterType } from './components/molecules/Footer';
 import Footer from './components/molecules/Footer';
+import type { HeaderType } from './components/molecules/Header';
 import Header from './components/molecules/Header';
 import { GlobalStyle } from './globalStyles';
 
@@ -22,12 +26,13 @@ export const meta: MetaFunction = () => ({
 
 export const loader: LoaderFunction = async () => {
   const footer = await sanityClient.fetch(`*[_type == "footer"]`);
+  const header = await sanityClient.fetch(`*[_type == "header"]`);
 
-  return json(footer);
+  return json({ footer, header });
 };
 
 export default function App() {
-  const footer = useLoaderData();
+  const { footer, header } = useLoaderData();
 
   return (
     <html lang="en">
@@ -37,12 +42,17 @@ export default function App() {
         {typeof document === 'undefined' ? '__STYLES__' : null}
       </head>
       <body>
-        <Header />
+        {/* TODO: generate TS models */}
+        {header.map((item: HeaderType) => (
+          <React.Fragment key={uuidv4()}>
+            <Header {...item} />
+          </React.Fragment>
+        ))}
         <Outlet />
         {/* TODO: generate TS models */}
-        {footer.map((e) => (
-          <React.Fragment key={e.copyright}>
-            <Footer copyright={e.copyright} />
+        {footer.map((item: FooterType) => (
+          <React.Fragment key={uuidv4()}>
+            <Footer {...item} />
           </React.Fragment>
         ))}
         <GlobalStyle />
