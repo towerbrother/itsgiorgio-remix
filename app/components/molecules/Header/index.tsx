@@ -1,6 +1,7 @@
 import { Link, NavLink } from '@remix-run/react';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import type { HeaderType } from '~/models/types';
 import BurgerMenuIcon from '../BurgerMenuIcon';
 import {
   StyledHeader,
@@ -10,13 +11,6 @@ import {
   StyledNavbar,
   StyledNavLinksContainer,
 } from './styles';
-
-export type HeaderType = {
-  company: { name: string; url: string };
-  employee: { name: string; role: string };
-  externalLinks: [{ text: string; url: string }];
-  internalLinks: [{ text: string; slug: string }];
-};
 
 export default function Header({
   company,

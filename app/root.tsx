@@ -12,11 +12,10 @@ import {
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import sanityClient from '~/sanity';
-import type { FooterType } from './components/molecules/Footer';
 import Footer from './components/molecules/Footer';
-import type { HeaderType } from './components/molecules/Header';
 import Header from './components/molecules/Header';
 import { GlobalStyle } from './globalStyles';
+import type { HeaderType, FooterType } from './models/types';
 
 export const meta: MetaFunction = () => ({
   charset: 'utf-8',
@@ -42,14 +41,12 @@ export default function App() {
         {typeof document === 'undefined' ? '__STYLES__' : null}
       </head>
       <body>
-        {/* TODO: generate TS models */}
         {header.map((item: HeaderType) => (
           <React.Fragment key={uuidv4()}>
             <Header {...item} />
           </React.Fragment>
         ))}
         <Outlet />
-        {/* TODO: generate TS models */}
         {footer.map((item: FooterType) => (
           <React.Fragment key={uuidv4()}>
             <Footer {...item} />
@@ -59,6 +56,23 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: Error }) {
+  console.error(error);
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+      <body>
+        <div>Oh no! Something went wrong...</div>
+        <Scripts />
       </body>
     </html>
   );
