@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledContainer = styled.div`
+export const Container = styled.div`
   display: block;
   height: fit-content;
 
@@ -9,7 +9,7 @@ export const StyledContainer = styled.div`
   }
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
   background-color: #fff;
   border: none;
 

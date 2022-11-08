@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledForm = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -13,7 +13,7 @@ export const StyledForm = styled.form`
   }
 `;
 
-export const StyledTitle = styled.span`
+export const Title = styled.span`
   font-size: 28px;
   text-align: left;
   margin-bottom: 40px;
@@ -25,7 +25,7 @@ export const StyledTitle = styled.span`
   }
 `;
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
   padding: 5px 0px 20px 5px;
   border: none;
   border-bottom: 1px solid black;
@@ -39,26 +39,26 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const StyledTextArea = styled.textarea`
+export const TextArea = styled.textarea`
   padding: 5px;
   height: 150px;
 `;
 
-export const StyledSubmitArea = styled.div`
+export const SubmitArea = styled.div`
   display: flex;
   justify-content: space-between;
 `;
 
-export const StyledCheckboxContainer = styled.div`
+export const CheckboxContainer = styled.div`
   padding: 10px 5px;
 `;
 
 // create a base input and extend?
-export const StyledCheckboxInput = styled.input`
+export const CheckboxInput = styled.input`
   margin-right: 10px;
 `;
 
-export const StyledLabel = styled.label`
+export const Label = styled.label`
   font-size: 14px;
 
   @media only screen and (min-width: 740px) {
@@ -66,7 +66,7 @@ export const StyledLabel = styled.label`
   }
 `;
 
-export const StyledSubmitButton = styled.button`
+export const SubmitButton = styled.button`
   padding: 5px 15px;
   font-size: 14px;
 
