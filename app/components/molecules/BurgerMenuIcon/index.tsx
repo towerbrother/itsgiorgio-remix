@@ -1,15 +1,12 @@
-import { StyledContainer, StyledButton } from './styles';
+import * as S from './styles';
 import type { IBurgerMenuIconProps } from './types';
 
-export default function BurgerMenuIcon({
-  show,
-  setShow,
-}: IBurgerMenuIconProps) {
+export default function BurgerMenuIcon({ setShow }: IBurgerMenuIconProps) {
   return (
-    <StyledContainer>
-      <StyledButton
+    <S.StyledContainer>
+      <S.StyledButton
         aria-label="burgerMenuIcon"
-        onClick={() => setShow(!show)}
+        onClick={() => setShow((prev) => !prev)}
         onBlur={() => setShow(false)}
       >
         <svg
@@ -23,7 +20,7 @@ export default function BurgerMenuIcon({
         >
           <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
         </svg>
-      </StyledButton>
-    </StyledContainer>
+      </S.StyledButton>
+    </S.StyledContainer>
   );
 }

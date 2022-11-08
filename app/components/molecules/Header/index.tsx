@@ -3,14 +3,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import type { HeaderType } from '~/models/types';
 import BurgerMenuIcon from '../BurgerMenuIcon';
-import {
-  StyledHeader,
-  StyledNameRoleContainer,
-  StyledName,
-  StyledRole,
-  StyledNavbar,
-  StyledNavLinksContainer,
-} from './styles';
+import * as S from './styles';
 
 export default function Header({
   company,
@@ -21,18 +14,18 @@ export default function Header({
   const [show, setShow] = useState(false);
 
   return (
-    <StyledHeader>
-      <StyledNameRoleContainer>
-        <StyledName>
+    <S.StyledHeader>
+      <S.StyledNameRoleContainer>
+        <S.StyledName>
           <Link to="/">{employee.name}</Link>
-        </StyledName>
-        <StyledRole>
+        </S.StyledName>
+        <S.StyledRole>
           {employee.role} @ <a href={company.url}>{company.name}</a>
-        </StyledRole>
-      </StyledNameRoleContainer>
-      <StyledNavbar>
-        <BurgerMenuIcon show={show} setShow={setShow} />
-        <StyledNavLinksContainer className={show ? 'show' : 'hide'}>
+        </S.StyledRole>
+      </S.StyledNameRoleContainer>
+      <S.StyledNavbar>
+        <BurgerMenuIcon setShow={setShow} />
+        <S.StyledNavLinksContainer className={show ? 'show' : 'hide'}>
           {internalLinks.map((link) => (
             <NavLink key={uuidv4()} to={link.slug}>
               {link.text}
@@ -43,8 +36,8 @@ export default function Header({
               {link.text}
             </a>
           ))}
-        </StyledNavLinksContainer>
-      </StyledNavbar>
-    </StyledHeader>
+        </S.StyledNavLinksContainer>
+      </S.StyledNavbar>
+    </S.StyledHeader>
   );
 }
