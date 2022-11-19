@@ -1,4 +1,4 @@
-import BurgerMenuIcon from '../BurgerMenuIcon';
+import BurgerMenuIcon from '../../atoms/BurgerMenuIcon';
 import { NavLink } from '@remix-run/react';
 import { v4 as uuidv4 } from 'uuid';
 import * as S from './styles';

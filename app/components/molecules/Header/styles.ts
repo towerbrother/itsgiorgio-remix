@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { devices } from '~/common/constants';
+import { devices } from '../../../common/constants';
 
 export const Header = styled.header`
   height: 70px;

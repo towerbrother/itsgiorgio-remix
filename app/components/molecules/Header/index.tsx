@@ -1,6 +1,6 @@
 import { Link } from '@remix-run/react';
-import type { HeaderType } from '~/models/types';
-import Navbar from '../Navbar';
+import type { HeaderType } from '../../../models/types';
+import Navbar from '../../molecules/Navbar';
 import * as S from './styles';
 
 export default function Header({
