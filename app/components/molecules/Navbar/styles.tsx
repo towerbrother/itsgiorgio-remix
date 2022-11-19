@@ -24,20 +24,23 @@ export const NavLinksContainer = styled.div`
   top: 0;
   right: 0;
   height: 100vh;
-  width: 200px;
   padding-top: 100px;
   background-color: #000;
   z-index: 5;
-  transition: visibility 0.5s ease-in-out, opacity 0.2s ease-in-out;
+  transition-property: visibility, opacity, width;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
 
   &.show {
     visibility: visible;
     opacity: 1;
+    width: 250px;
   }
 
   &.hide {
     visibility: hidden;
     opacity: 0;
+    width: 0px;
   }
 
   a {
