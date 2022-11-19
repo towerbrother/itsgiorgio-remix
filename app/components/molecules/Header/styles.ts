@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '~/common/constants';
 
 export const Header = styled.header`
   height: 70px;
@@ -7,7 +8,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     height: 90px;
     padding: 15px 30px;
   }
@@ -26,7 +27,7 @@ export const Name = styled.span`
 export const Role = styled.span`
   font-size: 14px;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     font-size: 16px;
   }
 `;

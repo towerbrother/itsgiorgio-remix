@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '~/common/constants';
 
 export const Form = styled.form`
   display: flex;
@@ -7,7 +8,7 @@ export const Form = styled.form`
   width: 85%;
   padding: 35px 0px;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     width: 50%;
     padding: 50px 0px;
   }
@@ -21,7 +22,7 @@ export const Title = styled.span`
   width: fit-content;
   background-color: salmon;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     font-size: 80px;
     margin-bottom: 50px;
   }
@@ -38,7 +39,7 @@ export const SubTitle = styled.span`
   font-size: 24px;
   margin-bottom: 30px;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     font-size: 28px;
   }
 `;
@@ -54,7 +55,7 @@ export const Input = styled.input`
     font-size: 18px;
     color: #000;
 
-    @media only screen and (min-width: 740px) {
+    @media ${devices.tablet} {
       font-size: 24px;
     }
   }
@@ -90,7 +91,7 @@ export const CheckboxInput = styled.input`
 export const Label = styled.label`
   font-size: 11px;
 
-  @media only screen and (min-width: 740px) {
+  @media ${devices.tablet} {
     font-size: 16px;
   }
 `;
@@ -102,7 +103,8 @@ export const SubmitButton = styled.button`
   border-radius: 5px;
   background-color: #000;
   color: #fff;
-  @media only screen and (min-width: 740px) {
+
+  @media ${devices.tablet} {
     font-size: 18px;
   }
 `;
