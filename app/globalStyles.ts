@@ -46,6 +46,10 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
+  input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+
   p,
   h1,
   h2,
