@@ -14,26 +14,21 @@ export const Navbar = styled.nav`
       width: 30px;
     }
   }
-
-  @media only screen and (min-width: 740px) {
-    flex-direction: row;
-    align-items: center;
-    padding: 0;
-
-    a {
-      padding: 0px 10px;
-    }
-  }
 `;
 
 export const NavLinksContainer = styled.div`
   display: flex;
-  align-items: flex-end;
   flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 200px;
+  padding-top: 100px;
+  background-color: #000;
+  z-index: 5;
   transition: visibility 0.5s ease-in-out, opacity 0.2s ease-in-out;
-  background-color: #fff;
-  position: relative;
-  z-index: 10;
 
   &.show {
     visibility: visible;
@@ -45,14 +40,7 @@ export const NavLinksContainer = styled.div`
     opacity: 0;
   }
 
-  @media only screen and (min-width: 740px) {
-    flex-direction: row;
-    align-items: center;
-    position: unset;
-
-    &.hide {
-      visibility: visible;
-      opacity: 1;
-    }
+  a {
+    color: #fff;
   }
 `;

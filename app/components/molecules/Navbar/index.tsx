@@ -10,7 +10,7 @@ export default function Navbar({ externalLinks, internalLinks }: INavbarProps) {
 
   return (
     <S.Navbar>
-      <BurgerMenuIcon setShow={setShow} />
+      <BurgerMenuIcon show={show} setShow={setShow} />
       <S.NavLinksContainer className={show ? 'show' : 'hide'}>
         {internalLinks.map((link) => (
           <NavLink key={uuidv4()} to={link.slug}>
