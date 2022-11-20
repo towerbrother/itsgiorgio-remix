@@ -25,6 +25,14 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     color: #202020;
+    overflow-x: hidden;
+    overflow-y: scroll; 
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   img,
@@ -46,9 +54,11 @@ export const GlobalStyle = createGlobalStyle`
     color: inherit;
   }
 
-  input:focus, textarea:focus, select:focus{
-        outline: none;
-    }
+  input:focus, 
+  textarea:focus, 
+  select:focus{
+    outline: none;
+  }
 
   p,
   h1,
@@ -62,10 +72,10 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     text-decoration: none;
+    font-weight: 700;
 
     &:hover {
-      opacity: 0.6;
-
+      opacity: 0.7;
     }
   }
 `;

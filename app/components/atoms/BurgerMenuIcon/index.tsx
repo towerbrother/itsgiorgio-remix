@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Button from '../Button';
 import * as S from './styles';
 import type { IBurgerMenuIconProps } from './types';
 
@@ -5,12 +7,26 @@ export default function BurgerMenuIcon({
   show,
   setShow,
 }: IBurgerMenuIconProps) {
+  const [bodyOverflow, setBodyOverflow] = useState<string>('hidden');
+
+  const handleClick = () => {
+    setShow((prev) => !prev);
+    setBodyOverflow(bodyOverflow === 'scroll' ? 'hidden' : 'scroll');
+    document.body.style.overflowY = bodyOverflow;
+  };
+
+  const handleBlur = () => {
+    setBodyOverflow(bodyOverflow === 'scroll' ? 'hidden' : 'scroll');
+    document.body.style.overflowY = bodyOverflow;
+  };
+
   return (
     <S.Container>
-      <S.Button
+      <Button
         aria-label="burgerMenuIcon"
         className={show ? 'show' : 'hide'}
-        onClick={() => setShow((prev) => !prev)}
+        onClick={handleClick}
+        onBlur={handleBlur}
       >
         <svg
           className={show ? 'show' : 'hide'}
@@ -23,7 +39,7 @@ export default function BurgerMenuIcon({
         >
           <path d="M 2 5 L 2 7 L 22 7 L 22 5 L 2 5 z M 2 11 L 2 13 L 22 13 L 22 11 L 2 11 z M 2 17 L 2 19 L 22 19 L 22 17 L 2 17 z"></path>
         </svg>
-      </S.Button>
+      </Button>
     </S.Container>
   );
 }

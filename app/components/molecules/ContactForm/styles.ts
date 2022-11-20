@@ -7,9 +7,10 @@ export const Form = styled.form`
   margin: 0 auto;
   width: 85%;
   padding: 35px 0px;
+  color: #fff;
 
   @media ${devices.tablet} {
-    width: 50%;
+    width: 65%;
     padding: 50px 0px;
   }
 `;
@@ -20,7 +21,7 @@ export const Title = styled.span`
   margin-bottom: 40px;
   padding: 0px 15px;
   width: fit-content;
-  background-color: salmon;
+  background-color: #000;
 
   @media ${devices.tablet} {
     font-size: 80px;
@@ -31,8 +32,24 @@ export const Title = styled.span`
 export const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  background: salmon;
-  padding: 15px;
+  background: #000;
+  padding: 20px;
+
+  input {
+    margin: 0px 0px 20px 0px;
+    padding: 5px 0px;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+
+    &::placeholder {
+      font-size: 18px;
+      color: #fff;
+
+      @media ${devices.tablet} {
+        font-size: 24px;
+      }
+    }
+  }
 `;
 
 export const SubTitle = styled.span`
@@ -44,67 +61,35 @@ export const SubTitle = styled.span`
   }
 `;
 
-export const Input = styled.input`
-  margin: 0px 0px 20px 0px;
-  padding: 5px 0px;
-  border: none;
-  border-bottom: 1px solid black;
-  background: transparent;
-
-  &::placeholder {
-    font-size: 18px;
-    color: #000;
-
-    @media ${devices.tablet} {
-      font-size: 24px;
-    }
-  }
-`;
-
 export const TextArea = styled.textarea`
   padding: 5px;
   margin: 5px 0px 20px 0px;
   height: 150px;
   background: transparent;
-  border: 1px solid black;
+  border: 1px solid #fff;
 
   &::placeholder {
-    color: #000;
+    color: #fff;
   }
 `;
 
 export const SubmitArea = styled.div`
   display: flex;
   justify-content: space-between;
-`;
 
-export const CheckboxContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 5px;
-`;
-
-export const CheckboxInput = styled.input`
-  margin-right: 10px;
-`;
-
-export const Label = styled.label`
-  font-size: 11px;
-
-  @media ${devices.tablet} {
-    font-size: 16px;
+  button {
+    color: #000;
+    background-color: #fff;
   }
 `;
 
-export const SubmitButton = styled.button`
-  padding: 5px 15px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
+export const CheckboxWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: 10px 5px;
 
-  @media ${devices.tablet} {
-    font-size: 18px;
+  input {
+    margin: 0px 10px 0px 0px;
   }
 `;

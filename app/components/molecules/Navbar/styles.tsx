@@ -4,10 +4,10 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: flex-end;
   flex-direction: column;
-  padding-top: 10px;
+  padding-top: 6px;
 
   a {
-    padding: 8px 10px;
+    padding: 12px 10px;
 
     svg {
       height: 30px;
