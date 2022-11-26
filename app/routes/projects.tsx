@@ -1,5 +1,14 @@
 export default function Index() {
   return (
-    <div style={{ padding: '20px', fontWeight: '700' }}>Projects Page</div>
+    <div
+      style={{
+        padding: '38vh 0',
+        textAlign: 'center',
+        fontWeight: '700',
+        fontSize: '72px',
+      }}
+    >
+      Projects Page
+    </div>
   );
 }

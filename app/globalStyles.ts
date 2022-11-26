@@ -75,7 +75,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
 `;

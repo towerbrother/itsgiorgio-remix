@@ -8,7 +8,7 @@ export default function Index() {
         fontSize: '72px',
       }}
     >
-      CV Page
+      Blog Page
     </div>
   );
 }

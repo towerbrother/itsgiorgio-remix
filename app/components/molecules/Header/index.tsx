@@ -1,28 +1,33 @@
-import { Link } from '@remix-run/react';
-import type { HeaderType } from '../../../models/types';
-import Navbar from '../../molecules/Navbar';
+import { useState } from 'react';
+import type { FC } from 'react';
+
+import Navbar from '../Navbar';
+import Sidebar from '../Sidebar';
+
 import * as S from './styles';
 
-export default function Header({
-  company,
-  employee,
-  externalLinks,
-  internalLinks,
-}: HeaderType) {
+type CompanyType = { name: string; url: string };
+type EmployeeType = { name: string; role: string };
+type ExternalLinkType = { text: string; url: string };
+type InternalLinkType = { text: string; slug: string };
+
+export type HeaderProps = {
+  company: CompanyType;
+  employee: EmployeeType;
+  externalLinks: Array<ExternalLinkType>;
+  internalLinks: Array<InternalLinkType>;
+};
+
+const Header: FC<HeaderProps> = (props) => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
     <S.Header>
-      <S.NameRoleContainer>
-        <S.Name>
-          <Link to="/">{employee.name}</Link>
-        </S.Name>
-        <S.Role>
-          {employee.role} @{' '}
-          <a href={company.url} target="_blank" rel="noreferrer">
-            {company.name}
-          </a>
-        </S.Role>
-      </S.NameRoleContainer>
-      <Navbar internalLinks={internalLinks} externalLinks={externalLinks} />
+      <Navbar {...props} toggle={toggle} />
+      <Sidebar {...props} isOpen={isOpen} toggle={toggle} />
     </S.Header>
   );
-}
+};
+
+export default Header;

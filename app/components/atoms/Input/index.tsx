@@ -1,7 +1,12 @@
-import type { FC } from 'react';
-import type { InputProps } from './types';
+import type { FC, AriaAttributes, InputHTMLAttributes } from 'react';
 
 import * as S from './styles';
+
+type InputProps = {
+  name: string;
+  label?: string;
+} & InputHTMLAttributes<HTMLInputElement> &
+  AriaAttributes;
 
 const Input: FC<InputProps> = ({ name, label, ...rest }) => (
   <>
