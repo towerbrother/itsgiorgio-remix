@@ -3,11 +3,11 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 
 import type { HeaderProps } from '../Header';
+import NameRole from '../Header/NameRole';
 import MenuIcon from '../../atoms/MenuIcon';
-import NameRole from '../../atoms/NameRole';
+import ConditionalWrapper from '../../atoms/ConditionalWrapper';
 
 import * as S from './styles';
-import ConditionalWrapper from '~/components/atoms/ConditionalWrapper';
 
 type NavbarProps = HeaderProps & {
   toggle: () => void;
