@@ -3,7 +3,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 
 import Button from '../Button';
 
-import { devices } from '~/common/constants';
+import { colors, devices } from '~/common/constants';
 
 export const MenuIcon = styled(Button)`
   position: absolute;
@@ -17,9 +17,9 @@ export const MenuIcon = styled(Button)`
 `;
 
 export const Bars = styled(FaBars)`
-  color: #fff;
+  color: ${colors.offBlack};
 `;
 
 export const Cross = styled(FaTimes)`
-  color: #fff;
+  color: ${colors.offWhite};
 `;

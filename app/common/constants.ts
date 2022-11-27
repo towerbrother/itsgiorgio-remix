@@ -19,3 +19,10 @@ export const devices = {
   laptopL: `${onlyScreen} (min-width: ${sizes.laptopL})`,
   desktop: `${onlyScreen} (min-width: ${sizes.desktop})`,
 };
+
+export const colors = {
+  offBlack: '#0f0f0f',
+  offWhite: '#f4f4f4',
+  primaryBackground: '#256ce1',
+  secondaryBackground: '#819dc9',
+};

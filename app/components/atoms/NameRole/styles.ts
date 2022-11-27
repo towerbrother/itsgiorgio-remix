@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { devices } from '~/common/constants';
+import { colors, devices } from '~/common/constants';
 
 export const NameRoleContainer = styled.div`
   display: flex;
@@ -10,12 +10,12 @@ export const NameRoleContainer = styled.div`
 
 export const Name = styled.span`
   font-weight: 700;
-  color: #fff;
+  color: ${colors.offBlack};
 `;
 
 export const Role = styled.span`
   font-size: 14px;
-  color: #fff;
+  color: ${colors.offBlack};
 
   @media ${devices.tablet} {
     font-size: 16px;

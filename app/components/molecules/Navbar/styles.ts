@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink as RemixNavLink } from '@remix-run/react';
 
-import { devices } from '~/common/constants';
+import { devices, colors } from '~/common/constants';
 
 export const Navbar = styled.nav`
   display: flex;
@@ -27,10 +27,10 @@ export const InternalLink = styled(RemixNavLink)`
   align-items: center;
   height: 100%;
   padding: 0 10px;
-  color: #fff; // color palette
+  color: ${colors.offBlack};
 
   &.active {
-    color: #15cdfc; // color palette
+    color: ${colors.secondaryBackground};
   }
 `;
 
@@ -40,7 +40,7 @@ export const ExternalLink = styled.a`
   height: 100%;
   padding: 0 10px;
   font-size: 24px;
-  color: #fff; // color palette
+  color: ${colors.offBlack};
 `;
 
 export const NavbarButtonWrapper = styled.div`
@@ -56,12 +56,12 @@ export const NavbarButtonLink = styled(RemixNavLink)`
   transition: all 0.2s ease-in-out;
   padding: 8px 10px;
   border-radius: 8px;
-  background: #256ce1; // color palette
-  color: #fff; // color palette
+  background: ${colors.primaryBackground};
+  color: ${colors.offWhite};
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff; // color palette
-    color: #010606; // color palette
+    background: ${colors.offWhite};
+    color: ${colors.primaryBackground};
   }
 `;

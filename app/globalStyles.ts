@@ -24,7 +24,6 @@ export const GlobalStyle = createGlobalStyle`
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    color: #202020;
     overflow-x: hidden;
     overflow-y: scroll; 
     -ms-overflow-style: none;

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
+import { colors } from '~/common/constants';
+
 type SidebarProps = {
   isOpen: boolean;
 };
@@ -17,7 +19,7 @@ export const Sidebar = styled.aside<SidebarProps>`
   height: 100%;
   transition: 0.3s ease-in-out;
   z-index: 10;
-  background: #0d0d0d; // color palette
+  background: ${colors.offBlack};
 `;
 
 export const SidebarWrapper = styled.div`
@@ -39,7 +41,7 @@ export const InternalLink = styled(NavLink)`
   align-items: center;
   height: 100%;
   font-size: 20px;
-  color: #fff; // color palette
+  color: ${colors.offWhite};
 `;
 
 export const ExternalLink = styled.a`
@@ -48,7 +50,7 @@ export const ExternalLink = styled.a`
   align-items: center;
   height: 100%;
   font-size: 20px;
-  color: #fff; // color palette
+  color: ${colors.offWhite};
 `;
 
 export const SidebarButtonWrapper = styled.div`
@@ -60,12 +62,12 @@ export const SidebarButtonLink = styled(NavLink)`
   transition: all 0.2s ease-in-out;
   padding: 16px 42px;
   border-radius: 50px;
-  background: #256ce1; // color palette
-  color: #fff; // color palette
+  background: ${colors.primaryBackground};
+  color: ${colors.offWhite};
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff; // color palette
-    color: #010606; // color palette
+    background: ${colors.offWhite};
+    color: ${colors.primaryBackground};
   }
 `;
