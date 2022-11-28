@@ -1,4 +1,4 @@
-import type { MetaFunction } from '@remix-run/node';
+import type { LinksFunction, MetaFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -19,6 +19,20 @@ export const meta: MetaFunction = () => ({
   title: 'itsgiorgio-remix',
   viewport: 'width=device-width,initial-scale=1',
 });
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    {
+      rel: 'preconnect',
+      href: 'https://fonts.gstatic.com',
+    },
+    {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap',
+    },
+  ];
+};
 
 export default function App() {
   return (
