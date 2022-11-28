@@ -7,7 +7,15 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 50px 0px;
+  margin: 20px 0px;
+
+  @media ${devices.tablet} {
+    margin: 30px 0px;
+  }
+
+  @media ${devices.laptopL} {
+    margin: 50px 0px;
+  }
 `;
 
 export const Background = styled.div`
@@ -36,11 +44,11 @@ export const TitleContainer = styled.div`
   width: 85%;
 
   @media ${devices.mobileM} {
-    width: 70%;
+    width: 60%;
   }
 
   @media ${devices.mobileL} {
-    width: 50%;
+    width: 40%;
   }
 
   @media ${devices.tablet} {
@@ -50,7 +58,11 @@ export const TitleContainer = styled.div`
 
   @media ${devices.laptop} {
     top: 25px;
-    width: 30%;
+    width: 20%;
+  }
+
+  @media ${devices.desktop} {
+    width: 10%;
   }
 `;
 
