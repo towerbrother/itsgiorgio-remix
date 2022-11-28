@@ -1,14 +1,7 @@
+import SectionTitle from '~/components/atoms/SectionTitle';
+
+import { sectionTitle } from '~/common/mocks';
+
 export default function Index() {
-  return (
-    <div
-      style={{
-        padding: '38vh 0',
-        textAlign: 'center',
-        fontWeight: '700',
-        fontSize: '72px',
-      }}
-    >
-      Main Page
-    </div>
-  );
+  return <SectionTitle {...sectionTitle} />;
 }

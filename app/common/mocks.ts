@@ -1,5 +1,6 @@
 import type { HeaderProps } from '~/components/molecules/Header';
 import type { FooterProps } from '~/components/molecules/Footer';
+import type { SectionTitleProps } from '~/components/atoms/SectionTitle';
 
 export const header: HeaderProps = {
   company: { name: 'Tenhil', url: 'https://tenhil.de/' },
@@ -17,10 +18,6 @@ export const header: HeaderProps = {
 
 export const footer: FooterProps = {
   areas: [
-    // [
-    //   { type: 'link', text: 'Imprint', link: 'imprint' },
-    //   { type: 'link', text: 'Data Privacy', link: 'data-privacy' },
-    // ],
     [
       {
         type: 'text',
@@ -28,4 +25,9 @@ export const footer: FooterProps = {
       },
     ],
   ],
+};
+
+export const sectionTitle: SectionTitleProps = {
+  text: 'What others say about me',
+  highlighted: 'others',
 };
