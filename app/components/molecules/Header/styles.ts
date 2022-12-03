@@ -8,5 +8,5 @@ export const Header = styled.header`
   top: 0;
   height: 80px;
   z-index: 10;
-  background: transparent;
+  background: white;
 `;

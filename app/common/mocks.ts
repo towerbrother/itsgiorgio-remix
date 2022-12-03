@@ -1,6 +1,7 @@
 import type { HeaderProps } from '~/components/molecules/Header';
 import type { FooterProps } from '~/components/molecules/Footer';
 import type { SectionTitleProps } from '~/components/atoms/SectionTitle';
+import type { StageProps } from '~/components/atoms/Stage';
 
 export const header: HeaderProps = {
   company: { name: 'Tenhil', url: 'https://tenhil.de/' },
@@ -30,4 +31,9 @@ export const footer: FooterProps = {
 export const sectionTitle: SectionTitleProps = {
   text: 'What others say about me',
   highlighted: 'others',
+};
+
+export const stage: StageProps = {
+  greeting: 'Hey',
+  presentation: "I'm Giorgio",
 };

@@ -1,7 +1,13 @@
 import SectionTitle from '~/components/atoms/SectionTitle';
+import Stage from '~/components/atoms/Stage';
 
-import { sectionTitle } from '~/common/mocks';
+import { sectionTitle, stage } from '~/common/mocks';
 
 export default function Index() {
-  return <SectionTitle {...sectionTitle} />;
+  return (
+    <>
+      <Stage {...stage} />
+      <SectionTitle {...sectionTitle} />
+    </>
+  );
 }
