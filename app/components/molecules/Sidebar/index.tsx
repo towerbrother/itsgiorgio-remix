@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import type { HeaderProps } from '../Header';
@@ -11,12 +10,12 @@ type SidebarProps = Partial<HeaderProps> & {
   toggle: () => void;
 };
 
-const Sidebar: FC<SidebarProps> = ({
+const Sidebar = ({
   externalLinks,
   internalLinks,
   isOpen,
   toggle,
-}) => {
+}: SidebarProps) => {
   return (
     <S.Sidebar isOpen={isOpen} onClick={toggle}>
       <MenuIcon iconType="cross" toggle={toggle} />

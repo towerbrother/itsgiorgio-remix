@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import * as S from './styles';
 
 export type SectionTitleProps = {
@@ -16,7 +14,7 @@ const useAddIdToHighlightedWord = ({
   return text.replace(highlighted || '', highlightedSpan);
 };
 
-const SectionTitle: FC<SectionTitleProps> = ({ text, highlighted }) => {
+const SectionTitle = ({ text, highlighted }: SectionTitleProps) => {
   const rawText = useAddIdToHighlightedWord({ text, highlighted });
 
   return (

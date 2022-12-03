@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,13 +12,13 @@ type NavbarProps = HeaderProps & {
   toggle: () => void;
 };
 
-const Navbar: FC<NavbarProps> = ({
+const Navbar = ({
   company,
   employee,
   externalLinks,
   internalLinks,
   toggle,
-}) => (
+}: NavbarProps) => (
   <S.Navbar>
     <NameRole company={company} employee={employee} />
     <MenuIcon iconType="bars" toggle={toggle} />

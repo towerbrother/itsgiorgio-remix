@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import * as S from './styles';
 
 export type StageProps = {
@@ -7,7 +5,7 @@ export type StageProps = {
   presentation: string;
 };
 
-const SectionTitle: FC<StageProps> = ({ greeting, presentation }) => {
+const SectionTitle = ({ greeting, presentation }: StageProps) => {
   return (
     <S.Wrapper>
       <S.InnerWrapper>

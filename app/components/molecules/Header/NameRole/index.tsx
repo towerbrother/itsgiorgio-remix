@@ -1,4 +1,3 @@
-import type { FC } from 'react';
 import { NavLink } from '@remix-run/react';
 
 import type { HeaderProps } from '~/components/molecules/Header';
@@ -7,7 +6,7 @@ import * as S from './styles';
 
 type NameRoleProps = Partial<HeaderProps>;
 
-const NameRole: FC<NameRoleProps> = ({ company, employee }) => {
+const NameRole = ({ company, employee }: NameRoleProps) => {
   return (
     <S.NameRoleContainer>
       <S.Name>

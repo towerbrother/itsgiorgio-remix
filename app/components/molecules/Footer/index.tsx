@@ -1,5 +1,4 @@
 import React from 'react';
-import type { FC } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import ConditionalWrapper from '~/components/atoms/ConditionalWrapper';
@@ -18,7 +17,7 @@ export type FooterProps = {
   areas: Array<Area>;
 };
 
-const Footer: FC<FooterProps> = ({ areas }) => (
+const Footer = ({ areas }: FooterProps) => (
   <S.Footer isSingleArea={areas.length === 1}>
     {areas.map((area: Area) => (
       <S.Area key={uuidv4()}>

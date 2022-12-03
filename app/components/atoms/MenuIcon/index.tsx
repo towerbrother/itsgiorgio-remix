@@ -1,5 +1,3 @@
-import type { FC } from 'react';
-
 import ConditionalWrapper from '../ConditionalWrapper';
 
 import * as S from './styles';
@@ -9,7 +7,7 @@ type MenuIconProps = {
   toggle: () => void;
 };
 
-const MenuIcon: FC<MenuIconProps> = ({ iconType, toggle }) => (
+const MenuIcon = ({ iconType, toggle }: MenuIconProps) => (
   <S.MenuIcon onClick={toggle}>
     <ConditionalWrapper condition={iconType === 'bars'}>
       <S.Bars />

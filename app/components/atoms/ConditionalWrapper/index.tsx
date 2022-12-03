@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 type ConditionalWrapperProps = {
   children: ReactNode;
@@ -6,11 +6,11 @@ type ConditionalWrapperProps = {
   fallback?: ReactNode;
 };
 
-const ConditionalWrapper: FC<ConditionalWrapperProps> = ({
+const ConditionalWrapper = ({
   children,
   condition,
   fallback,
-}) => {
+}: ConditionalWrapperProps) => {
   if (condition) {
     return <>{children}</>;
   }

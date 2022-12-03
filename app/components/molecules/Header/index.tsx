@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import type { FC } from 'react';
 
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
@@ -18,7 +17,7 @@ export type HeaderProps = {
   internalLinks: Array<InternalLinkType>;
 };
 
-const Header: FC<HeaderProps> = (props) => {
+const Header = (props: HeaderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggle = () => setIsOpen(!isOpen);
 
