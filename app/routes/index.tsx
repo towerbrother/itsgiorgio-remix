@@ -1,17 +1,15 @@
-import SectionTitle from '~/components/atoms/SectionTitle';
-import Stage from '~/components/atoms/Stage';
+import { keyWords, sectionHeadline, stage } from '~/common/mocks';
 
-import { banner, headline, sectionTitle, stage } from '~/common/mocks';
-import Banner from '~/components/atoms/Banner';
-import Headline from '~/components/atoms/Headline';
+import Stage from '~/components/atoms/Stage';
+import KeyWords from '~/components/molecules/KeyWords';
+import SectionHeadline from '~/components/molecules/SectionHeadline';
 
 export default function Index() {
   return (
     <>
       <Stage {...stage} />
-      <Banner {...banner} />
-      <Headline {...headline} />
-      <SectionTitle {...sectionTitle} />
+      <SectionHeadline {...sectionHeadline} />
+      <KeyWords keywords={keyWords} />
     </>
   );
 }

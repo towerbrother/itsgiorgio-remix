@@ -1,9 +1,10 @@
 import type { HeaderProps } from '~/components/molecules/Header';
 import type { FooterProps } from '~/components/molecules/Footer';
-import type { SectionTitleProps } from '~/components/atoms/SectionTitle';
 import type { StageProps } from '~/components/atoms/Stage';
-import type { BannerProps } from '~/components/atoms/Banner';
-import type { HeadlineProps } from '~/components/atoms/Headline';
+import type { HighlightedProps } from '~/components/atoms/Highlighted';
+import type { SectionHeadlineProps } from '~/components/molecules/SectionHeadline';
+
+import { colors } from './constants';
 
 export const header: HeaderProps = {
   company: { name: 'Tenhil', url: 'https://tenhil.de/' },
@@ -30,9 +31,12 @@ export const footer: FooterProps = {
   ],
 };
 
-export const sectionTitle: SectionTitleProps = {
-  text: 'What others say about me',
-  highlighted: 'others',
+export const sectionHeadline: SectionHeadlineProps = {
+  text: 'Skills',
+  style: {
+    color: colors.offBlack,
+    background: colors.secondaryBackground,
+  },
 };
 
 export const stage: StageProps = {
@@ -40,10 +44,53 @@ export const stage: StageProps = {
   presentation: "I'm Giorgio",
 };
 
-export const banner: BannerProps = {
-  text: 'Hello, I am a very nice Banner ready to be used!',
-};
-
-export const headline: HeadlineProps = {
-  text: 'Skills',
-};
+export const keyWords: Array<HighlightedProps> = [
+  {
+    tag: 'h6',
+    text: 'Communication',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+  {
+    tag: 'h6',
+    text: 'Leadership',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+  {
+    tag: 'h6',
+    text: 'Frontend',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+  {
+    tag: 'h6',
+    text: 'TypeScript',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+  {
+    tag: 'h6',
+    text: 'React',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+  {
+    tag: 'h6',
+    text: 'NextJs',
+    style: {
+      color: colors.offWhite,
+      background: colors.secondaryBackground,
+    },
+  },
+];

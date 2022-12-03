@@ -5,7 +5,7 @@ export type StageProps = {
   presentation: string;
 };
 
-const SectionTitle = ({ greeting, presentation }: StageProps) => {
+const Stage = ({ greeting, presentation }: StageProps) => {
   return (
     <S.Wrapper>
       <S.InnerWrapper>
@@ -17,4 +17,4 @@ const SectionTitle = ({ greeting, presentation }: StageProps) => {
   );
 };
 
-export default SectionTitle;
+export default Stage;
