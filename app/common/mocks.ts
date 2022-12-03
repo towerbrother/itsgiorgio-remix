@@ -2,6 +2,7 @@ import type { HeaderProps } from '~/components/molecules/Header';
 import type { FooterProps } from '~/components/molecules/Footer';
 import type { SectionTitleProps } from '~/components/atoms/SectionTitle';
 import type { StageProps } from '~/components/atoms/Stage';
+import type { BannerProps } from '~/components/atoms/Banner';
 
 export const header: HeaderProps = {
   company: { name: 'Tenhil', url: 'https://tenhil.de/' },
@@ -36,4 +37,8 @@ export const sectionTitle: SectionTitleProps = {
 export const stage: StageProps = {
   greeting: 'Hey',
   presentation: "I'm Giorgio",
+};
+
+export const banner: BannerProps = {
+  text: 'Hello, I am a very nice Banner ready to be used!',
 };
