@@ -7,7 +7,7 @@ import { colors, devices } from '~/common/constants';
 
 export const MenuIcon = styled(Button)`
   position: absolute;
-  top: 30px;
+  top: 24px;
   right: 24px;
   font-size: 28px;
 
