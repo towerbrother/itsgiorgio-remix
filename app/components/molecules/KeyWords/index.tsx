@@ -1,20 +1,20 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import type { HighlightedProps } from '~/components/atoms/Highlighted';
-import Highlighted from '~/components/atoms/Highlighted';
+import type { HeadlineProps } from '~/components/atoms/Headline';
+import Headline from '~/components/atoms/Headline';
 
 import * as S from './styles';
 
 type KeyWordsProps = {
-  keywords: Array<HighlightedProps>;
+  keywords: Array<HeadlineProps>;
 };
 
 const KeyWords = ({ keywords }: KeyWordsProps) => {
   return (
     <S.Wrapper>
-      {Array.from(keywords).map((keyword: HighlightedProps) => (
+      {Array.from(keywords).map((keyword: HeadlineProps) => (
         <S.WordContainer key={uuidv4()}>
-          <Highlighted {...keyword} />
+          <Headline {...keyword} />
         </S.WordContainer>
       ))}
     </S.Wrapper>

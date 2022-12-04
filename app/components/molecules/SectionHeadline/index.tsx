@@ -1,5 +1,5 @@
-import type { Style } from '~/components/atoms/Highlighted';
-import Highlighted from '~/components/atoms/Highlighted';
+import type { Style } from '~/components/atoms/Headline';
+import Headline from '~/components/atoms/Headline';
 import * as S from './styles';
 
 export type SectionHeadlineProps = {
@@ -10,7 +10,7 @@ export type SectionHeadlineProps = {
 const SectionHeadline = (props: SectionHeadlineProps) => {
   return (
     <S.Wrapper>
-      <Highlighted tag="h2" {...props} />
+      <Headline tag="h2" {...props} />
     </S.Wrapper>
   );
 };

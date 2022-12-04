@@ -1,10 +1,11 @@
+import { colors } from './constants';
+
+import type { StageProps } from '~/components/atoms/Stage';
+import type { TileProps } from '~/components/atoms/Tile';
+import type { HeadlineProps } from '~/components/atoms/Headline';
 import type { HeaderProps } from '~/components/molecules/Header';
 import type { FooterProps } from '~/components/molecules/Footer';
-import type { StageProps } from '~/components/atoms/Stage';
-import type { HighlightedProps } from '~/components/atoms/Highlighted';
 import type { SectionHeadlineProps } from '~/components/molecules/SectionHeadline';
-
-import { colors } from './constants';
 
 export const header: HeaderProps = {
   company: { name: 'Tenhil', url: 'https://tenhil.de/' },
@@ -44,9 +45,9 @@ export const stage: StageProps = {
   presentation: "I'm Giorgio",
 };
 
-export const keyWords: Array<HighlightedProps> = [
+export const keyWords: Array<HeadlineProps> = [
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'Communication',
     style: {
       color: colors.offWhite,
@@ -54,7 +55,7 @@ export const keyWords: Array<HighlightedProps> = [
     },
   },
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'Leadership',
     style: {
       color: colors.offWhite,
@@ -62,7 +63,7 @@ export const keyWords: Array<HighlightedProps> = [
     },
   },
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'Frontend',
     style: {
       color: colors.offWhite,
@@ -70,7 +71,7 @@ export const keyWords: Array<HighlightedProps> = [
     },
   },
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'TypeScript',
     style: {
       color: colors.offWhite,
@@ -78,7 +79,7 @@ export const keyWords: Array<HighlightedProps> = [
     },
   },
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'React',
     style: {
       color: colors.offWhite,
@@ -86,11 +87,71 @@ export const keyWords: Array<HighlightedProps> = [
     },
   },
   {
-    tag: 'h6',
+    tag: 'h5',
     text: 'NextJs',
     style: {
       color: colors.offWhite,
       background: colors.secondaryBackground,
     },
+  },
+];
+
+export const cv: Array<TileProps> = [
+  {
+    startDate: new Date('December 2020'),
+    endDate: new Date('December 2022'),
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Junior Software Developer',
+    responsibilities: ['frontend developement', 'app testing', 'innovation'],
+  },
+  {
+    startDate: new Date('January 2023'),
+    endDate: 'ongoing',
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Software Developer',
+    responsibilities: [
+      'frontend developement',
+      'app testing',
+      'innovation',
+      'mentoring',
+    ],
+  },
+  {
+    startDate: new Date('December 2020'),
+    endDate: new Date('December 2022'),
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Junior Software Developer',
+    responsibilities: ['frontend developement', 'app testing', 'innovation'],
+  },
+  {
+    startDate: new Date('January 2023'),
+    endDate: 'ongoing',
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Software Developer',
+    responsibilities: [
+      'frontend developement',
+      'app testing',
+      'innovation',
+      'mentoring',
+    ],
+  },
+  {
+    startDate: new Date('December 2020'),
+    endDate: new Date('December 2022'),
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Junior Software Developer',
+    responsibilities: ['frontend developement', 'app testing', 'innovation'],
+  },
+  {
+    startDate: new Date('January 2023'),
+    endDate: 'ongoing',
+    company: 'Tenhil GmbH & Co. KG',
+    role: 'Software Developer',
+    responsibilities: [
+      'frontend developement',
+      'app testing',
+      'innovation',
+      'mentoring',
+    ],
   },
 ];

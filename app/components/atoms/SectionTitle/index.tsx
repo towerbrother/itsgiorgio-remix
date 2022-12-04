@@ -2,20 +2,17 @@ import * as S from './styles';
 
 export type SectionTitleProps = {
   text: string;
-  highlighted?: string;
+  Headline?: string;
 };
 
-const useAddIdToHighlightedWord = ({
-  text,
-  highlighted,
-}: SectionTitleProps) => {
-  const highlightedSpan = `<span id="highlighted">${highlighted}</span>`;
+const useAddIdToHeadlineWord = ({ text, Headline }: SectionTitleProps) => {
+  const HeadlineSpan = `<span id="Headline">${Headline}</span>`;
 
-  return text.replace(highlighted || '', highlightedSpan);
+  return text.replace(Headline || '', HeadlineSpan);
 };
 
-const SectionTitle = ({ text, highlighted }: SectionTitleProps) => {
-  const rawText = useAddIdToHighlightedWord({ text, highlighted });
+const SectionTitle = ({ text, Headline }: SectionTitleProps) => {
+  const rawText = useAddIdToHeadlineWord({ text, Headline });
 
   return (
     <S.Wrapper>

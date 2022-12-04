@@ -78,7 +78,7 @@ export const Title = styled.span`
     font-size: 42px;
   }
 
-  #highlighted {
+  #Headline {
     padding: 0px 3px;
     color: ${colors.offWhite};
     background-color: ${colors.primaryBackground};

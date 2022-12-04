@@ -1,19 +1,20 @@
 import * as S from './styles';
 
-type Headline = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+type Headlines = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
 export type Style = {
-  color: string;
-  background: string;
+  color?: string;
+  background?: string;
+  padding?: string;
 };
 
-export type HighlightedProps = {
+export type HeadlineProps = {
   text: string;
-  tag: Headline;
+  tag: Headlines;
   style: Style;
 };
 
-const getHeadline = ({ tag, text, style }: HighlightedProps) => {
+const getHeadline = ({ tag, text, style }: HeadlineProps) => {
   const element = <S.Text {...style}>{text}</S.Text>;
 
   switch (tag) {
@@ -32,8 +33,8 @@ const getHeadline = ({ tag, text, style }: HighlightedProps) => {
   }
 };
 
-const Highlighted = ({ tag, text, style }: HighlightedProps) => {
+const Headline = ({ tag, text, style }: HeadlineProps) => {
   return <>{getHeadline({ tag, text, style })}</>;
 };
 
-export default Highlighted;
+export default Headline;
